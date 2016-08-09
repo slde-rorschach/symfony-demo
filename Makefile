@@ -34,7 +34,7 @@ lint-twig: qa-results
 	$(SYMFONY_CONSOLE_CMD) lint:twig app/Resources/views
 
 phpcpd: qa-results
-	$(PHPCPD_CMD) src/
+	$(PHPCPD_CMD) --log-pmd=$(RESULT_DIR)/phpcpd.xml src/
 
 phpmd: qa-results
 	-$(PHPMD_CMD) src/ xml cleancode,codesize,controversial,design,naming,unusedcode --reportfile $(RESULT_DIR)/phpmd.xml
