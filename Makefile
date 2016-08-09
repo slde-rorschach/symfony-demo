@@ -44,6 +44,6 @@ phpmetrics: qa-results
 
 
 phpunit: qa-results
-	$(PHPUNIT_CMD) --coverage-html=$(RESULT_DIR)/phpunit-coverage --log-junit=$(RESULT_DIR)/phpunit-junit.xml --coverage-clover=$(RESULT_DIR)/phpunit-clover.xml --coverage-crap4j=$(RESULT_DIR)/phpunit-crap4j.xml src/
+	$(PHPUNIT_CMD) --coverage-html=$(RESULT_DIR)/phpunit-coverage --log-junit=$(RESULT_DIR)/phpunit-junit.xml --coverage-clover=$(RESULT_DIR)/phpunit-clover.xml --coverage-crap4j=$(RESULT_DIR)/phpunit-crap4j.xml tests/
 
 .PHONY: build qa-tools composer-install phploc php-cs-fixer pdepend lint-yaml lint-twig phpcpd phpmd phpmetrics phpunit
