@@ -38,7 +38,10 @@
         "sebastian/phpcpd": "^2.0",
         "phpmd/phpmd": "^2.4",
         "phpmetrics/phpmetrics": "^1.10",
-        "phpunit/phpunit": "^5.5"
+        "phpunit/phpunit": "^5.5",
+        "blackfire/php-sdk": "^1.5",
+        "squizlabs/php_codesniffer": "^2.6",
+        "escapestudios/symfony2-coding-standard": "^2.9"
     },
     "scripts": {
         "post-install-cmd": [

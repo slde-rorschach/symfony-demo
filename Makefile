@@ -7,6 +7,7 @@ PHPCPD_CMD = ./vendor/bin/phpcpd
 PHPMD_CMD = ./vendor/bin/phpmd
 PHPMETRICS_CMD = ./vendor/bin/phpmetrics
 PHPUNIT_CMD = ./vendor/bin/phpunit
+PHPCS_CMD = ./vendor/bin/phpcs
 build: composer-install
 
 qa-tools: lint-yaml lint-twig phploc php-cs-fixer phpunit pdepend phpcpd phpmd phpmetrics
@@ -45,5 +46,8 @@ phpmetrics: qa-results
 
 phpunit: qa-results
 	$(PHPUNIT_CMD) --coverage-html=$(RESULT_DIR)/phpunit-coverage --log-junit=$(RESULT_DIR)/phpunit-junit.xml --coverage-clover=$(RESULT_DIR)/phpunit-clover.xml --coverage-crap4j=$(RESULT_DIR)/phpunit-crap4j.xml tests/
+
+phpcs:
+	$(PHPCS_CMD) --standard=Symfony2 src
 
 .PHONY: build qa-tools composer-install phploc php-cs-fixer pdepend lint-yaml lint-twig phpcpd phpmd phpmetrics phpunit
