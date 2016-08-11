@@ -10,7 +10,7 @@ PHPUNIT_CMD = ./vendor/bin/phpunit
 PHPCS_CMD = ./vendor/bin/phpcs
 build: composer-install
 
-qa-tools: lint-yaml lint-twig phploc php-cs-fixer phpunit pdepend phpcpd phpmd phpmetrics
+qa-tools: lint-yaml lint-twig phpcs phploc php-cs-fixer phpunit pdepend phpcpd phpmd phpmetrics
 
 composer-install:
 	composer install
